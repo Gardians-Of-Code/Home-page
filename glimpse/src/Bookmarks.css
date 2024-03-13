@@ -1,0 +1,28 @@
+.bookmark-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 2vw;
+    top: 10vh;
+    width: 20vw;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+}
+
+.bookmark-button{
+    border-radius: 10px;
+    background-color: rgba(202, 216, 216, 0.692);
+}
+
+.bookmark-dropdown{
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(202, 216, 216, 0.692);
+    display: inline-block;
+    width: 100%;
+}
+
+.bookmark-elements{
+    padding: 10px 10px;
+    margin: 5px 5px;
+}

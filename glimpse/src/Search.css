@@ -1,12 +1,12 @@
 #searchForm{
     position: absolute;
-    bottom: 11rem;
-    left: 34rem;
+    bottom: 20vh;
+    left: 36vw;
 }
 #searchForm input[type="text"]{
     border-radius: 20px;
     padding: 6px 15px;
-    width: 27rem;
+    width: 27vw;
 }
 #toggle_button:active{
     transform: scale(0.9);
