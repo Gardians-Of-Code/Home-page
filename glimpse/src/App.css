@@ -1,0 +1,18 @@
+.App{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  color: black;
+}
+.App::before{
+  content: '';
+  background: url('./imgs/nature.jpg') no-repeat center center/cover;
+  position: fixed;
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}

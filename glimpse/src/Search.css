@@ -1,0 +1,37 @@
+#searchForm{
+    position: absolute;
+    bottom: 11rem;
+    left: 34rem;
+}
+#searchForm input[type="text"]{
+    border-radius: 20px;
+    padding: 6px 15px;
+    width: 27rem;
+}
+#toggle_button:active{
+    transform: scale(0.9);
+}
+#toggle_button.google{
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+    display: inline-block;
+    background: url('./imgs/bing.jpeg') no-repeat center center/cover;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
+#toggle_button.bing{
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+    display: inline-block;
+    background: url('./imgs/google.jpeg') no-repeat center center/cover;
+    background-color: white;
+    background-size: 70%;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
