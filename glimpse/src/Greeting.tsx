@@ -29,9 +29,8 @@ function Greeting() {
       setCurrentTime(new Date());
     }, 1000);
 
-    // Replace with your own OpenWeatherMap API key
     const apiKey = "e47127c68406988457d9efb4d096acd3";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`; // Adjust city name as needed
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Roorkee&appid=${apiKey}`; // Adjust city name as needed
 
     fetch(url)
       .then((response) => response.json())

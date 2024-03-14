@@ -1,3 +1,7 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 .time-date-weather {
   display: flex;
   flex-direction: column;
@@ -8,7 +12,6 @@
   height: 30%;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
   font-size: 30px;
   color: black;
 }
@@ -44,18 +47,25 @@
 .weather {
   display: flex;
   align-items: center;
-  gap: 10px; /* Added gap for spacing between icon and temperature */
+  gap: 3px; /* Added gap for spacing between icon and temperature */
 }
 
 .weather img {
-  width: 30px; /* Adjusted image size */
+  width: 38px; /* Adjusted image size */
 }
 
 .time,
 .date,
 .temp {
   font-size: 24px; /* Adjusted font size */
+  font-weight: normal;
   margin: 0; /* Removed margins */
+}
+
+.time{
+  font-size: 6rem;
+  margin: 8px;
+  padding: 10px 10px;
 }
 
 .date {
