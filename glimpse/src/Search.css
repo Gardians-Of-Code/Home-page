@@ -1,17 +1,20 @@
-#searchForm{
+.searchForm{
     position: absolute;
     bottom: 20vh;
     left: 36vw;
 }
-#searchForm input[type="text"]{
+.searchForm input[type="text"]{
     border-radius: 20px;
     padding: 6px 15px;
     width: 27vw;
 }
+.de-active{
+    display: none;
+}
 #toggle_button:active{
     transform: scale(0.9);
 }
-#toggle_button.google{
+#googleButton{
     position: relative;
     bottom: 4px;
     left: 5px;
@@ -22,10 +25,10 @@
     padding: 20px;
     cursor: pointer;
 }
-#toggle_button.bing{
+#bingButton{
     position: relative;
     bottom: 4px;
-    left: 5px;
+    right: 5px;
     display: inline-block;
     background: url('./imgs/google.jpeg') no-repeat center center/cover;
     background-color: white;

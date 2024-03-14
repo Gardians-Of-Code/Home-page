@@ -4,18 +4,22 @@ import "./Search.css";
 function Search() {
   const FormRef = useRef<HTMLFormElement>(null);
   const ButtonRef = useRef<HTMLButtonElement>(null);
-  const InputRef = useRef<HTMLInputElement>(null);
+  const InputRef1 = useRef<HTMLInputElement>(null);
+  const InputRef2 = useRef<HTMLInputElement>(null);
 
   const [Active, setActive] = useState<boolean>(false);
 
   const performSearch = (event : React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    let query = InputRef.current?.value;
+    let query;
     let search_engine = "";
+    console.log(Active);
     if (Active == true) {
       search_engine = "bing";
+      query = InputRef1.current?.value
     } else {
       search_engine = "google";
+      query = InputRef2.current?.value
     }
     if (query !== undefined) {
       if (query.trim() !== "") {
@@ -34,24 +38,44 @@ function Search() {
   };
 
   return (
-    <div id="alternate_search" className="search">
-      <form ref={FormRef} id="searchForm" onSubmit={performSearch}>
+    <div>
+    <div id="google" className={Active == false ? "search" : "search de-active"}>
+      <form ref={FormRef} className="searchForm" onSubmit={performSearch}>
         <input
-          ref={InputRef}
+          ref={InputRef2}
           type="text"
-          id="searchInput"
+          id="searchInput1"
           className="searchbar"
-          placeholder={Active==false ? "Type Your Google search" : "Type Your Bing search"}
+          placeholder="Search with Google"
         />
-        <button
-          type="button"
-          ref={ButtonRef}
-          id="toggle_button"
-          onClick={toggleSearch}
-          className={Active==false ? "google" : "bing"}
-        ></button>
+          <button
+            type="button"
+            ref={ButtonRef}
+            id="googleButton"
+            onClick={toggleSearch}
+            className="searchButton"
+          ></button>
       </form>
     </div>
+    <div id="bing" className={Active == true ? "search" : "search de-active"}>
+    <form ref={FormRef} className="searchForm" onSubmit={performSearch}>
+      <button
+          type="button"
+          ref={ButtonRef}
+          id="bingButton"
+          onClick={toggleSearch}
+          className="searchButton"
+        ></button>
+      <input
+        ref={InputRef1}
+        type="text"
+        id="searchInput2"
+        className="searchbar"
+        placeholder="Search with Bing"
+      />
+    </form>
+  </div>
+  </div>
   );
 }
 

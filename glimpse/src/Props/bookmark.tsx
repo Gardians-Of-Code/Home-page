@@ -1,6 +1,7 @@
-interface Props{
-    link : string;
-    title : string;
+interface bkmrk{
+    bookmark: string;
+    setBookmark: React.Dispatch<React.SetStateAction<string>>;
+    handleAdd: (e:React.FormEvent) => void;
 }
 
-export default Props;
+export default bkmrk;
