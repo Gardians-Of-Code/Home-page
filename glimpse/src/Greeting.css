@@ -1,19 +1,19 @@
-.greet{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 35vh;
-    left: 30vw;
-    width: 40%;
-    height: 30%;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid red;
-    font-size: 30px;
-    color: black;
+.time-date-weather {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35vh;
+  left: 30vw;
+  width: 40%;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  font-size: 30px;
+  color: black;
 }
 
-.time{
+/* .time{
     margin: 10px;
     padding: 10px 10px;
 }
@@ -21,4 +21,43 @@
 .hello{
     margin: 10px;
     padding: 10px 10px;
+} */
+
+.time--weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #fff;
+  /* border: 2px solid red; */
+  background-image: url("path/to/your/image.jpg"); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Added border radius for rounded corners */
+}
+
+.time-date {
+  text-align: center;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Added gap for spacing between icon and temperature */
+}
+
+.weather img {
+  width: 30px; /* Adjusted image size */
+}
+
+.time,
+.date,
+.temp {
+  font-size: 24px; /* Adjusted font size */
+  margin: 0; /* Removed margins */
+}
+
+.date {
+  font-weight: bold; /* Added bold weight for date */
 }
