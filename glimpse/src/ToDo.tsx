@@ -26,8 +26,8 @@ const Input = ({ items, setItems }:{items:string[], setItems:React.Dispatch<Reac
           handleSubmit(evt);
         }}
       >
-        <input type="text" placeholder="item" ref={inputRef} />
-        <button>add item</button>
+        <input className="addTask" type="text" placeholder="Add a Task" ref={inputRef} />
+        <button className="addButton">Add</button>
       </form>
       <div className="item-list-container">
         {items.length > 0 &&
@@ -35,9 +35,11 @@ const Input = ({ items, setItems }:{items:string[], setItems:React.Dispatch<Reac
             <div className="item" key={item}>
               {item}
               <button
+                className="deleteButton"
                 onClick={(evt) => {
                   handleDelete(item);
-                }}
+                }
+              }
               >
                 X
               </button>
